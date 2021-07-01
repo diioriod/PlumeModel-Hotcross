@@ -15,16 +15,19 @@ is the main contributing factor in acoustic forward scatter.
 To run the model:
 Start with the shell script Hotcross-SAPELO2.sh to see how to compile the code and run
 
-Output data files consist of:
-cfl.out  ! maxu, minu, maxv, minv, maxwm, minw, mtime: max and min velocities with their time to make sure the flows are reasonable
+The code and input files will produce the data for Exp 1 described in the paper
 
 DanteExp1.case ! input variables for the model run, case.inc must include this file name
 
-DanteExp1.cone_values2to25.nc   ! 1 sec output for turbulence analysis
 
-DanteExp1.nc  ! 1 hourly output
+Output data files consist of:
+cfl.out  ! maxu, minu, maxv, minv, maxwm, minw, mtime: max and min velocities with their time to make sure the flows are reasonable
 
-DanteExp1snapshot.nc ! sample output taken at the top of the hour
+DanteExp1.cone_values2to25.nc   ! 1 sec output for turbulence analysis: very large file of the order 200 GBytes
+
+DanteExp1.nc  ! 1 hourly output: large file with size approximately 30 GBytes
+
+DanteExp1snapshot.nc ! sample output taken at the top of the hour and only 274 MBytes
 
 DanteExp1.out ! standard output to a file
 
